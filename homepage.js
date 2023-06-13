@@ -56,26 +56,41 @@ document.addEventListener('DOMContentLoaded', function(){
             progresses();
           }
         });
-      }
+    }
   
-      // Create an instance of the Intersection Observer
-      const observers = new IntersectionObserver(handleIntersect);
-  
-      // Select the target element
-      const target = document.querySelector('.circular_progress');
-  
-      // Start observing the target element
-      observers.observe(target);
+    // Create an instance of the Intersection Observer
+    const observers = new IntersectionObserver(handleIntersect);
 
-      let projects = document.querySelector(".project_5");
+    // Select the target element
+    const target = document.querySelector('.circular_progress');
 
-      projects.addEventListener("click", function(){
+    // Start observing the target element
+    observers.observe(target);
+
+    let projects = document.querySelector(".project_5");
+
+    projects.addEventListener("click", function(){
         window.location.href = 'project_1.html';
-      });
+    });
 
-      document.getElementById('submit').addEventListener('click', function(){
+    document.getElementById('submit').addEventListener('click', function(){
         console.log('Message Sent!');
-      });
+    });
+    
+    document.onkeydown = function(e) {
+        if(event.keyCode == 123) {
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+            return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+            return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+            return false;
+        }
+    }
 
 });
     
