@@ -1048,11 +1048,13 @@ progress::-webkit-progress-bar {
     }
 
     .navbar{
+        background: none;
         background-color: #2a4b55;
         width: 100vw;
     }
 
     .new_navbar{
+        background: none;
         background-color: #2a4b55;
         width: 100vw;
     }
